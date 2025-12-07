@@ -1,0 +1,557 @@
+<!doctype html>
+<html lang="bn">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Professional Digital Marketer</title>
+  <meta name="description" content="Tahmid Hossain — Digital Marketing & Brand Specialist | Building growth-focused digital ecosystems across real estate, food, e-commerce & more" />
+  <style>
+    :root{
+      --accent:#0b76ef;
+      --bg:#0f1724;
+      --card:#0b1220;
+      --muted:#9aa6b2;
+      --success:#10b981;
+      --warning:#f59e08;
+      --cv:#ec4899;
+      --demo:#8b5cf6;
+      color-scheme: dark;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      background:linear-gradient(180deg,#071028 0%, #07182a 100%);
+      color:#e6eef6;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.5;
+      padding:20px;
+    }
+    .container{max-width:1200px;margin:0 auto;}
+    header{
+      display:flex;align-items:center;justify-content:space-between;gap:24px;margin-bottom:32px;
+      border-bottom:1px solid rgba(255,255,255,0.05);padding-bottom:16px;
+    }
+    .brand{display:flex;gap:16px;align-items:center}
+    .logo{
+      width:64px;height:64px;border-radius:12px;
+      background:linear-gradient(135deg,var(--accent),#4fc3f7);
+      display:flex;align-items:center;justify-content:center;font-weight:800;
+      color:#042033;font-size:24px;box-shadow:0 8px 24px rgba(11,118,239,0.2);
+      flex-shrink:0;
+    }
+    h1{font-size:28px;font-weight:800;margin:0;color:#fff}
+    p.lead{margin:6px 0 0;color:var(--muted);font-size:16px;font-weight:500}
+    .nav-links{display:flex;gap:20px}
+    .nav-link{
+      color:var(--muted);text-decoration:none;font-size:15px;transition:color 0.2s;
+    }
+    .nav-link:hover{color:#fff}
+    .hero{
+      text-align:center;
+      padding:48px 24px;
+      border-radius:16px;
+      background:linear-gradient(180deg, rgba(11,118,239,0.04), transparent);
+      border:1px solid rgba(255,255,255,0.03);
+      margin-bottom:48px;
+      position:relative;
+      overflow:hidden;
+    }
+    .hero::before{
+      content:'';position:absolute;top:0;left:0;right:0;height:4px;
+      background:linear-gradient(90deg,var(--accent),#8b5cf6);
+    }
+    .hero h1{font-size:48px;line-height:1.15;margin-bottom:12px;color:#fff}
+    .hero-subtitle{
+      font-size:22px;font-weight:700;color:#cbd5e1;margin-bottom:8px;
+    }
+    .hero-tagline{
+      font-size:18px;font-weight:500;color:var(--muted);margin-bottom:24px;max-width:800px;margin:0 auto;
+    }
+    .hero p{font-size:18px;line-height:1.7;margin:0 auto 30px;color:#cbd5e1;max-width:780px}
+    .hero-stats{
+      display:grid;grid-template-columns:repeat(2,1fr);gap:20px;margin-top:28px;
+      max-width:780px;margin:28px auto 0;
+    }
+    .stat-card{
+      background:rgba(11,118,239,0.08);border-radius:12px;padding:22px;
+      border:1px solid rgba(11,118,239,0.15);
+      text-align:center;
+    }
+    .stat-value{font-size:26px;font-weight:800;color:#fff;display:block}
+    .stat-label{font-size:14px;color:var(--muted);margin-top:6px}
+    .btn-group{
+      display:flex;gap:16px;justify-content:center;margin-bottom:32px;flex-wrap:wrap;max-width:700px;margin-left:auto;margin-right:auto
+    }
+    .btn{
+      display:inline-flex;align-items:center;justify-content:center;
+      gap:8px;padding:14px 28px;border-radius:12px;
+      color:#042033;font-weight:700;
+      text-decoration:none;font-size:17px;
+      transition:all 0.3s ease;
+      border:none;cursor:pointer;
+      text-align:center;
+      font-weight:bold;
+      box-shadow:0 6px 18px rgba(0,0,0,0.15);
+    }
+    .btn:hover{
+      transform:translateY(-3px);
+      box-shadow:0 10px 25px rgba(0,0,0,0.2);
+    }
+    .btn-cv{
+      background:linear-gradient(135deg,var(--cv),#ec4899);
+      color:#fff;
+    }
+    .btn-cv:hover{
+      background:linear-gradient(135deg,#ec4899,#db2777);
+    }
+    .btn-demo{
+      background:linear-gradient(135deg,var(--demo),#7c3aed);
+      color:#fff;
+    }
+    .btn-demo:hover{
+      background:linear-gradient(135deg,#8b5cf6,#7c3aed);
+    }
+    .social-badges{
+      display:flex;flex-direction:column;gap:12px;align-items:center;margin-top:24px;
+    }
+    .profile-badge{
+      display:inline-flex;align-items:center;gap:10px;
+      background:rgba(18,18,18,0.6);border:1px solid #2d3748;
+      padding:8px 20px;border-radius:10px;
+      font-size:15px;
+    }
+    .badge-icon{width:22px;text-align:center;}
+    .grid{display:grid;grid-template-columns:2fr 1fr;gap:28px}
+    @media (max-width:900px){.grid{grid-template-columns:1fr} .aside{order:2}}
+    .card{
+      background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); 
+      padding:32px;border-radius:16px;
+      box-shadow:0 8px 32px rgba(2,6,23,0.6); 
+      border:1px solid rgba(255,255,255,0.04);
+      margin-bottom:28px;
+    }
+    .section{margin-bottom:36px}
+    .section-title{
+      font-size:26px;font-weight:700;margin-bottom:24px;
+      display:flex;align-items:center;gap:12px;
+    }
+    .section-title::after{
+      content:'';flex:1;height:1px;background:rgba(255,255,255,0.08);
+    }
+    .services-grid{
+      display:grid;grid-template-columns:repeat(2,1fr);gap:20px;
+    }
+    .service-card{
+      background:rgba(255,255,255,0.02);
+      border-radius:12px;padding:20px;
+      border:1px solid rgba(255,255,255,0.03);
+    }
+    .service-title{
+      font-size:17px;font-weight:600;margin-bottom:12px;color:#fff;
+      display:flex;align-items:center;gap:10px;
+    }
+    .service-icon{width:24px;text-align:center;font-weight:bold;}
+    .service-items{
+      list-style:none;
+      font-size:15px;color:var(--muted);
+      margin-top:8px;
+    }
+    .service-items li{
+      margin-bottom:9px;
+      padding-left:22px;
+      position:relative;
+    }
+    .service-items li::before{
+      content:'✓';position:absolute;left:0;color:var(--success);
+      font-weight:bold;
+    }
+    .skills-grid{
+      display:grid;grid-template-columns:1fr;gap:16px;
+    }
+    .skill-item{
+      display:flex;flex-direction:column;gap:6px;
+    }
+    .skill-header{
+      display:flex;justify-content:space-between;font-size:15px;
+      font-weight:500;
+    }
+    .skill-bar{
+      height:8px;background:rgba(255,255,255,0.07);border-radius:4px;
+      overflow:hidden;
+    }
+    .skill-progress{
+      height:100%;background:linear-gradient(90deg,var(--accent),#4fc3f7);
+      border-radius:4px;
+    }
+    .achievements{
+      display:grid;grid-template-columns:repeat(3,1fr);gap:20px;
+    }
+    @media (max-width:768px){
+      .achievements{grid-template-columns:1fr}
+    }
+    .achievement-card{
+      background:rgba(16,185,129,0.08);
+      border-radius:12px;padding:24px;
+      border:1px solid rgba(16,185,129,0.2);
+    }
+    .achievement-icon{
+      width:56px;height:56px;border-radius:14px;
+      background:rgba(16,185,129,0.2);
+      display:flex;align-items:center;justify-content:center;
+      margin-bottom:16px;
+      color:#10b981;font-size:24px;
+      font-weight:bold;
+    }
+    .achievement-title{
+      font-size:17px;font-weight:600;margin-bottom:10px;
+      color:#fff;
+    }
+    .achievement-desc{
+      font-size:15px;color:var(--muted);line-height:1.6;
+    }
+    footer{
+      margin-top:40px;padding-top:24px;
+      border-top:1px solid rgba(255,255,255,0.05);
+      color:var(--muted);font-size:15px;text-align:center;
+    }
+    .contact-list{
+      display:grid;gap:16px;font-size:16px;
+    }
+    .contact-item{
+      display:flex;gap:14px;
+      align-items:flex-start;
+    }
+    .contact-icon{
+      width:40px;height:40px;border-radius:10px;
+      background:rgba(11,118,239,0.15);
+      display:flex;align-items:center;justify-content:center;
+      flex-shrink:0;
+      color:var(--accent);
+      font-weight:bold;
+    }
+    a.link{
+      color:var(--accent);text-decoration:none;
+      transition:color 0.2s;
+    }
+    a.link:hover{color:#60a5fa}
+    .quote{
+      font-style:italic;color:var(--muted);font-size:18px;
+      line-height:1.8;border-left:4px solid var(--accent);
+      padding-left:26px;margin:30px 0;
+      background:rgba(11,118,239,0.04);
+      border-radius:0 8px 8px 0;
+      padding:24px;
+      position:relative;
+    }
+    .quote::before{
+      content:'“';position:absolute;left:8px;top:6px;font-size:52px;
+      color:rgba(11,118,239,0.2);font-family:sans-serif;
+    }
+    .highlight{color:#60a5fa;font-weight:600}
+    .success{color:var(--success);font-weight:600}
+    .warning{color:var(--warning);font-weight:700}
+    .role-tag{
+      display:inline-block;background:rgba(11,118,239,0.2);
+      color:#93c5fd;padding:6px 18px;border-radius:20px;
+      font-size:14px;margin-top:16px;
+      font-weight:500;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo">TH</div>
+        <div>
+          <h1>Tahmid Hossain</h1>
+          <p class="lead">Digital Marketing & Brand Specialist</p>
+        </div>
+      </div>
+      <nav class="nav-links">
+        <a class="nav-link" href="#about">About</a>
+        <a class="nav-link" href="#services">Services</a>
+        <a class="nav-link" href="#skills">Skills</a>
+        <a class="nav-link" href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <h1>Professional Digital Marketer</h1>
+      <div class="hero-subtitle">Digital Marketing Specialist</div>
+      <p class="hero-tagline">Building growth-focused digital ecosystems across multiple industries</p>
+      
+      <p>
+        With hands-on experience in the digital industry, I’ve worked across diverse sectors—<strong>real estate, home décor, food & beverages, e-commerce, and service brands</strong>. My expertise spans Facebook & Instagram advertising, SEO, content strategy, Shopify/WordPress customization, and full-funnel digital marketing.
+      </p>
+      <p>
+        I’ve managed multi-brand digital operations, optimized company websites, handled product inventory, developed strategic content calendars, and executed influencer campaigns—always ensuring consistent brand visibility and measurable growth.
+      </p>
+
+      <div class="btn-group">
+        <a class="btn btn-cv" href="Tahmid_CV.pdf" download="Tahmid_Hossain_CV.pdf">📥 CV Download (PDF)</a>
+        <a class="btn btn-demo" href="View Demo  Offline portfolio.pdf" download="Tahmid_Hossain_Portfolio.pdf">🖥️ View Demo / Offline Portfolio</a>
+      </div>
+
+      <div class="hero-stats">
+        <div class="stat-card">
+          <span class="stat-value">39K → 103K</span>
+          <span class="stat-label">Facebook Followers Growth</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-value">40K–50K → 2–3L</span>
+          <span class="stat-label">Monthly Sales Growth</span>
+        </div>
+      </div>
+
+      <div class="social-badges">
+        <div class="profile-badge">
+          <span class="badge-icon">📘</span>
+          <a class="link" href="https://www.facebook.com/Tahmidhsn001/" target="_blank">facebook.com/Tahmidhsn001</a>
+        </div>
+        <div class="profile-badge">
+          <span class="badge-icon">📸</span>
+          <a class="link" href="https://www.instagram.com/tahmid_h0ssain?igsh=bHRsYWkxZzA5eTBj" target="_blank">instagram.com/tahmid_h0ssain</a>
+        </div>
+      </div>
+    </section>
+
+    <main class="grid">
+      <div>
+        <section id="about" class="card section">
+          <h2 class="section-title">About Me</h2>
+          <p>I’m <strong>Tahmid Hossain</strong>, a <span class="highlight">Professional Digital Marketer</span> with extensive experience in building and managing high-performing digital ecosystems across multiple industries. As <em>Assistant Brand Manager</em> at <strong>Future Destination Limited</strong>, I oversee digital operations for brands in real estate, home décor, food chains, beverages, and e-commerce.</p>
+          
+          <p style="margin-top:16px">My expertise covers the full spectrum of digital marketing—including:</p>
+          <ul class="service-items" style="margin-top:12px">
+            <li>Facebook & Instagram Ads (Campaign Strategy, Pixel, CAPI)</li>
+            <li>Google Ads (Search, Display, YouTube)</li>
+            <li>Shopify & WordPress Customization & Maintenance</li>
+            <li>SEO (On-Page, Off-Page, Competitor & Keyword Research)</li>
+            <li>Email, WhatsApp & Bulk SMS Automation</li>
+          </ul>
+
+          <p style="margin-top:16px">Beyond marketing, I lead showroom & customer service teams, execute influencer collaborations, develop data-backed content calendars, and manage end-to-end product inventory across digital platforms.</p>
+
+          <blockquote class="quote">
+            <p>A client’s Facebook page started with <strong>39K followers</strong> and <strong>₹40K–50K</strong> in monthly sales. After implementing targeted growth strategies, it reached <span class="success">103K followers</span>, with monthly sales scaling to <span class="success">₹2–3 Lakhs</span> — a <span class="warning">500%+ increase in revenue</span>.</p>
+          </blockquote>
+
+          <div class="role-tag">
+            Digital Marketing Specialist • Brand Strategist • Multi-Brand Ecosystem Builder
+          </div>
+        </section>
+
+        <section id="services" class="card section">
+          <h2 class="section-title">Services I Provide</h2>
+          <div class="services-grid">
+            <div class="service-card">
+              <h3 class="service-title"><span class="service-icon">📱</span> Social Ads & SMM</h3>
+              <ul class="service-items">
+                <li>Facebook & Instagram Ads (Full Funnel)</li>
+                <li>Ads Manager Setup & Account Strategy</li>
+                <li>Content Calendar & Engagement Growth</li>
+              </ul>
+            </div>
+            <div class="service-card">
+              <h3 class="service-title"><span class="service-icon">🛒</span> E-commerce Ops</h3>
+              <ul class="service-items">
+                <li>Shopify & WordPress Customization</li>
+                <li>Product Uploads & Inventory Sync</li>
+                <li>SEO Titles/Descriptions (AI-assisted)</li>
+              </ul>
+            </div>
+            <div class="service-card">
+              <h3 class="service-title"><span class="service-icon">🔍</span> SEO & Research</h3>
+              <ul class="service-items">
+                <li>Product-wise & Competitor Analysis</li>
+                <li>Google Keyword Planner Research</li>
+                <li>On-Page & Technical SEO Audits</li>
+              </ul>
+            </div>
+            <div class="service-card">
+              <h3 class="service-title"><span class="service-icon">✉️</span> Automation & CRM</h3>
+              <ul class="service-items">
+                <li>Mailchimp Template & Campaign Design</li>
+                <li>WhatsApp & Bulk SMS Campaigns</li>
+                <li>Lead Capture Funnels & CRM Setup</li>
+              </ul>
+            </div>
+            <div class="service-card">
+              <h3 class="service-title"><span class="service-icon">🎥</span> Google & YouTube</h3>
+              <ul class="service-items">
+                <li>Google My Business Optimization</li>
+                <li>Google Ads (Search/Display/YouTube)</li>
+                <li>YouTube Growth Strategy</li>
+              </ul>
+            </div>
+            <div class="service-card">
+              <h3 class="service-title"><span class="service-icon">👥</span> Leadership & Ops</h3>
+              <ul class="service-items">
+                <li>Team Leadership & Training</li>
+                <li>Showroom & Customer Service Management</li>
+                <li>Event Coordination & Budget Oversight</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section id="achievements" class="card section">
+          <h2 class="section-title">Key Achievements</h2>
+          <div class="achievements">
+            <div class="achievement-card">
+              <div class="achievement-icon">📈</div>
+              <h3 class="achievement-title">Traffic & Conversion Growth</h3>
+              <p class="achievement-desc">Increased website traffic and conversions via SEO & social media for multi-sector clients.</p>
+            </div>
+            <div class="achievement-card">
+              <div class="achievement-icon">🏅</div>
+              <h3 class="achievement-title">Govt. Certification</h3>
+              <p class="achievement-desc">Passed Government Digital Marketing Assignment Examination with distinction.</p>
+            </div>
+            <div class="achievement-card">
+              <div class="achievement-icon">🚀</div>
+              <h3 class="achievement-title">Multi-Brand Ecosystem</h3>
+              <p class="achievement-desc">Built & scaled digital presence for 8+ sister brands under one umbrella.</p>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <aside class="aside">
+        <div class="card section">
+          <h3 class="section-title">Core Skills</h3>
+          <div class="skills-grid">
+            <div class="skill-item">
+              <div class="skill-header">
+                <span>Social Media Ads & Strategy</span>
+                <span>95%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress" style="width:95%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-header">
+                <span>Google Ads & PPC</span>
+                <span>95%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress" style="width:95%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-header">
+                <span>Team Leadership & Ops</span>
+                <span>95%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress" style="width:95%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-header">
+                <span>Shopify & WordPress</span>
+                <span>90%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress" style="width:90%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-header">
+                <span>SEO & Market Research</span>
+                <span>90%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress" style="width:90%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-header">
+                <span>Analytics & Problem Solving</span>
+                <span>90%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress" style="width:90%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card section" id="contact">
+          <h3 class="section-title">Contact Details</h3>
+          <div class="contact-list">
+            <div class="contact-item">
+              <div class="contact-icon">📧</div>
+              <div>
+                <strong>Email:</strong><br>
+                <a class="link" href="mailto:tahmidhsn001@gmail.com">tahmidhsn001@gmail.com</a>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">📱</div>
+              <div>
+                <strong>Phone:</strong><br>
+                <a class="link" href="tel:+8801632010841">+8801632010841</a><br>
+                <a class="link" href="tel:+8801581442149">+8801581442149</a>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">📍</div>
+              <div>
+                <strong>Location:</strong><br>
+                Malibagh Bazar Road, Dhaka 1217
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">📘</div>
+              <div>
+                <strong>Facebook:</strong><br>
+                <a class="link" href="https://www.facebook.com/Tahmidhsn001/" target="_blank">facebook.com/Tahmidhsn001</a>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">📸</div>
+              <div>
+                <strong>Instagram:</strong><br>
+                <a class="link" href="https://www.instagram.com/tahmid_h0ssain?igsh=bHRsYWkxZzA5eTBj" target="_blank">instagram.com/tahmid_h0ssain</a>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">🔗</div>
+              <div>
+                <strong>LinkedIn:</strong><br>
+                <a class="link" href="https://www.linkedin.com/in/tahmidhsn/" target="_blank">linkedin.com/in/tahmidhsn</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card section">
+          <h3 class="section-title">Let’s Collaborate!</h3>
+          <p style="margin-bottom:24px;color:var(--muted);line-height:1.6">
+            Ready to scale your brand with data-driven, full-funnel digital marketing? I offer end-to-end strategy, execution, and leadership — built for growth.
+          </p>
+          <a class="btn btn-outline" href="mailto:tahmidhsn001@gmail.com?subject=Portfolio%20Inquiry&body=Hello%20Tahmid,%0A%0AI'm%20interested%20in%20your%20digital%20marketing%20services.%0A%0ABest%20regards,">📩 Contact Me</a>
+        </div>
+      </aside>
+    </main>
+
+    <footer>
+      <p>© <span id="year"></span> Tahmid Hossain — Digital Marketing & Brand Specialist</p>
+      <p style="margin-top:10px;color:var(--muted)">
+        Fully functional offline portfolio • Built with pure HTML/CSS — no external dependencies
+      </p>
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
+
